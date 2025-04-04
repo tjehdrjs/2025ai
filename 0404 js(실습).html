@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="민트">
+        <h1 style=> 나는 민트랍니다 안티가 많아요 ㅜ</h1>
+    </div>
+
+    <div class="블루">
+        <h1 style=> 나는 블루</h1>
+    </div>
+    <script>
+        let 민트 = document.querySelector(".민트")
+        let 블루 = document.querySelector(".블루")
+
+        민트.style.backgroundColor = "blue"
+        민트.style.width = "500px"
+        민트.style.height = "200px"
+        민트.style.padding = "10px"
+
+        블루.style.backgroundColor = "pink"
+        블루.style.width = "500px"
+        블루.style.height = "200px"
+        블루.style.padding = "10px"
+
+        민트.addEventListener("mouseup", function () {
+            민트.style.backgroundColor = "gold"
+        })
+
+        민트.addEventListener("mousedown", function () {
+            민트.style.backgroundColor = "red"
+        })
+
+        블루.addEventListener("mouseup", function () {
+            블루.style.backgroundColor = "hotpink"
+        })
+
+        블루.addEventListener("mousedown", function () {
+            블루.style.backgroundColor = "green"
+        })
+
+    </script>
+</body>
+
+</html>
