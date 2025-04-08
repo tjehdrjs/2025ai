@@ -1,0 +1,38 @@
+h1 {
+    color: rgb(143, 105, 25);
+
+    font-size: 30pt;
+    /*글씨크기*/
+    /* pt: 포인트 */
+    font-weight: 100;
+    /*두께께*/
+
+}
+
+p {
+    line-height: 50px;
+    letter-spacing: 10px;
+    /*글자 간격격*/
+    text-decoration: underline;
+    /*글자 부가효과과*/
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    /*글자 종류*/
+    text-shadow: 1px 1px 0px rgb(184, 11, 11);
+    /*글자 그림자*/
+    font-size: 30px;
+}
+
+a {
+    font-family: "Grandiflora One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
