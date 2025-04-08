@@ -1,0 +1,29 @@
+h1 {
+    border: 3pt solid black;
+    width: 45%;
+    text-align: center;
+    font-size: 30pt;
+    color: #FFF;
+    text-shadow: 3px 3px rgb(255, 12, 125);
+    font-family: 'Gamja Flower', cursive;
+}
+
+
+
+ul {
+    font-style: italic;
+    font-size: 15pt;
+    line-height: 50px
+}
+
+p {
+    text-decoration: underline;
+    letter-spacing: 10px;
+}
+
+.c {
+    font-family: "Grandiflora One", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
