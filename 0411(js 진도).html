@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>검정치마</h1>
+    <img id="검치" width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
+
+    <button>버튼1</button>
+    <button>버튼2</button>
+    <button>버튼3</button>
+    <script>
+        // 1. 내가 원하는 놈을 선택한다
+        let 사진 = document.querySelector("#검치")
+        console.log(사진)
+        // 2. 조진다
+        //사진.setAttribute("바꿀속성", "무엇으로 바꿀지지") // 태그의 속성을 바꾸는 기능
+        사진.setAttribute("src", "https://www.artinsight.co.kr/data/news/2110/1925929880_EfpTZrG8_131.jpg")
+
+
+
+        // 이벤트 거는 법
+        // 1. 내가 월하는 놈을 선택한다
+        // 2. 조진다
+        사진.addEventListener("click", function () {
+            console.log("akdkdkdkd")
+            alert("예스")
+        }
+        )
+    </script>
+
+</body>
+
+</html>
