@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 150px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>버튼 클릭에 따른 이미지 슬라이드</h2>
+
+    <button class="버튼1">1</button>
+    <button class="버튼2">2</button>
+    <button class="버튼3">3</button>
+
+    <br>
+    <br>
+    <img class="검치1" width="400px" src="https://image.yes24.com/goods/118472344/XL" alt="">
+    <script>
+        let 이미지 = document.querySelector(".검치1")
+        let 버튼 = document.querySelector(".버튼1")
+        버튼.addEventListener("click", function () {
+            이미지.setAttribute("src", "https://image.yes24.com/goods/118472344/XL")
+        })
+        let 버튼2 = document.querySelector(".버튼2")
+        버튼2.addEventListener("click", function () {
+            이미지.setAttribute("src", "https://image.yes24.com/goods/41792546/XL")
+        })
+        let 버튼3 = document.querySelector(".버튼3")
+        버튼3.addEventListener("click", function () {
+            이미지.setAttribute("src", "https://image.yes24.com/goods/122119292/XL")
+        })
+
+
+    </script>
+</body>
+
+</html>
