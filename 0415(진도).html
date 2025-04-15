@@ -13,14 +13,14 @@
         <fieldset><!--필드 영역역-->
             <legend>필드의 제목</legend>
 
-            <label for="">아이디 <input type="text"></label>
+            <label for="">아이디 <input type="text" placeholder="최소4자"></label>
             <br>
-            <label for="">비밀번호 <input type="password"></label>
+            <label for="">비밀번호 <input type="password" placeholder="영문+숫자+특수문자 혼합 8자"></label>
             <br>
             <label for="연결">이름</label>
             <input type="text" name="" id="연결">
             <br>
-            <label>이메일 <input type="email"></label>
+            <label>이메일 <input type="email" autofocus></label>
             <br>
             <label>전화번호 <input type="telephone"></label>
         </fieldset>
@@ -32,11 +32,16 @@
             <label><input type="radio" name="성별" value="man">남성</label>
 
             <h3>먹을 거</h3>
-            <label> <input type="checkbox" name="먹" value="chicken">치킨</label>
+            <label> <input type="checkbox" checked name="먹" value="chicken">치킨</label>
             <label> <input type="checkbox" name="먹" value="pizza">피자</label>
             <label> <input type="checkbox" name="먹" value="chickenn">통닭</label>
             <label> <input type="checkbox" name="먹" value="mcdonald">롯데리아</label>
             <label> <input type="checkbox" name="먹" value="meat">명륜진사</label>
+            <br>
+            <button type="reset">초기화 버튼</button>
+            <button type="button">기능없는 버튼</button>
+            <button type="submit">제출(회원가입)</button>
+            <button>타입 안쓰고도 버튼 가능</button>
         </fieldset>
     </form>
 
