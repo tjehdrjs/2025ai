@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
+    <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
+    <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
+    <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
+    <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
+    <br>
+    <input type="text" placeholder="입력하세요">
+    <button>버튼</button>
+    <script>
+        let 검치
+        검치 = document.querySelector("img")
+        검치.setAttribute("src,")
+        검치.setAttribute("width,300px")
+
+        let 가져온것
+        가져온것 = 검치.getAttribute("src")
+        console.log(가져온것)
+
+        let 입력창
+        입력창 = document.querySelector("input")
+        let 버튼
+        버튼 = document.querySelector("button")
+
+        버튼.addEventListener("click", function () {
+            console.log(입력창.value)
+        })
+    </script>
+</body>
+
+</html>
