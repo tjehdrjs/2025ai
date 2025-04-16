@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .tj {
+            color: cadetblue;
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 
 <body>
     <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
     <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
-    <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
-    <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
-    <img width="300px" src="https://image.yes24.com/goods/118472344/XL" alt="">
     <br>
     <input type="text" placeholder="입력하세요">
     <button>버튼</button>
+    <h1>걸어댕기는 30원</h1>
     <script>
         let 검치
         검치 = document.querySelector("img")
@@ -34,6 +38,12 @@
         버튼.addEventListener("click", function () {
             console.log(입력창.value)
         })
+
+        let 태준이
+        태준이 = document.querySelector("h1")
+        태준이.classList.add("tj")
+        태준이.classList.remove("tj")
+        태준이.classList.toggle("tj")
     </script>
 </body>
 
