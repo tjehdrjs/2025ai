@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend><span style="font-size: 55px;">회원가입 페이지</span></legend>
+            <h1>로그인 정보</h1>
+            <label><b>ID 입력</b> <input type="text" placeholder="최대 10자"></label>
+            <br>
+            <label><b>PW 입력(필수)</b> <input type="password" required placeholder="영어,숫자 섞어서"></label>
+            <br>
+            <label><b>PW 입력 확인(필수)</b> <input type="password" required placeholder="영어,숫자 섞어서"></label>
+            <hr>
+            <h1>개인정보</h1>
+            <label><b>주소</b> <br><input type="text"></label>
+            <br>
+            <h4>연령대</h4>
+            <label><input type="radio" name="나이">10대</label>
+            <label><input type="radio" name="나이">20대</label>
+            <label><input type="radio" name="나이">30대</label>
+            <label><input type="radio" name="나이">40대</label>
+            <label><input type="radio" name="나이">50이상</label>
+            <br>
+            <h4>성별</h4>
+            <label><input type="radio" name="성별" value="man">남</label>
+            <label><input type="radio" name="성별" value="woman">여</label>
+            <br>
+            <h4>취미</h4>
+            <label> <input type="checkbox" value="game">게임</label>
+            <label> <input type="checkbox" value="yutubu">유튜브</label>
+            <label> <input type="checkbox" value="music">음악</label>
+            <label> <input type="checkbox" value="sports">운동</label>
+            <label> <input type="checkbox" value="reading">독서</label>
+            <label> <input type="checkbox" value="travel">여행</label>
+            <label> <input type="checkbox" value="create">창작</label>
+            <br>
+            <br>
+            <label><b>이메일</b><br> <input type="email" placeholder="abcd@naver.com"></label>
+            <br>
+            <br>
+            <label><b>연락처</b><br> <input type="telephone" placeholder="000-0000-0000"></label>
+            <br>
+            <br>
+            <label><b>생년월일</b><br> <input type="date"></label>
+            <br>
+            <br>
+            <label>키(최소 130 최대195 기본150 단위5) <input type="range" min="130" max="195" step="5"></label>
+            <br>
+            <br>
+            <label>사진 <input type="file"></label>
+            <hr>
+            <button type="submit">회원가입</button>
+            <button type="reset">다시 입력</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

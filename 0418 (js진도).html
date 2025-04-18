@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(222, 43, 43);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <script>
+        let 새로운태그
+        새로운태그 = document.createElement("div")
+        console.log(새로운태그)
+
+        새로운태그.classList.add("box2")
+        새로운태그.textContent = "새로 만든 자석 , div태그"
+
+        let 부모 = document.querySelector("body")//부모저장
+        부모.appendChild(새로운태그)// 부모에서 appendChild 자식 추가
+
+        let 부모2 = document.querySelector(".box1")//부모저장
+        부모2.appendChild(새로운태그)
+    </script>
+</body>
+
+</html>
