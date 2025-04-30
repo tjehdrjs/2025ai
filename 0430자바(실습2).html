@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            border: 1px solid black;
+            width: 900px;
+            height: 300px;
+            text-align: center;
+        }
+
+        #박스1 {
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+
+        #박스2 {
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+
+        #박스3 {
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+
+        button {
+            width: 300px;
+            font-size: 30pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>마우스로 술래잡기</h1>
+    <button id="시작">술래잡기 시작</button>
+    <button id="정지">술래잡기 정지</button>
+    <br>
+    <br>
+    <div style="display:flex" class="div">
+        <div id="박스1">
+            <h1>박스1</h1>
+        </div>
+        <div id="박스2">
+            <h1>박스2</h1>
+        </div>
+        <div id="박스3">
+            <h1>박스3</h1>
+        </div>
+    </div>
+    <script>
+        let 시작버튼 = document.querySelector("#시작")
+        let 정지버튼 = document.querySelector("#정지")
+
+        let 박스1 = document.querySelector("#박스1")
+        let 박스2 = document.querySelector("#박스2")
+        let 박스3 = document.querySelector("#박스3")
+
+        let a = 0
+
+        let 기모띠 = document.createElement('img')
+        기모띠.src = ("https://item.kakaocdn.net/do/d0abc6fe74e616536cf07626699bbc707154249a3890514a43687a85e6b6cc82")
+        기모띠.style.width = "200px"
+
+        시작버튼.addEventListener("click", function () {
+            a = 1
+            박스1.appendChild(기모띠)
+        })
+
+        정지버튼.addEventListener("click", function () {
+            if (a == 1) {
+                a = 0
+                박스1.removeChild(기모띠)
+            } else if (a == 2) {
+                a = 0
+                박스2.removeChild(기모띠)
+            } else if (a == 3) {
+                a = 0
+                박스3.removeChild(기모띠)
+            }
+        })
+
+        기모띠.addEventListener("mouseover", function () {
+            if (a == 1) {
+                a = 2
+                박스2.appendChild(기모띠)
+            } else if (a == 2) {
+                a = 3
+                박스3.appendChild(기모띠)
+            } else if (a == 3) {
+                a = 1
+                박스1.appendChild(기모띠)
+            }
+        })
+    </script>
+</body>
+
+</html>
