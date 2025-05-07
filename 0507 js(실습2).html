@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>키보드 ← → 키로 슬라이드 전환</h1>
+    <div style="border: 2px solid black;width:700px;height:400px;text-align: center;padding:25px">
+        <img src="https://i.namu.wiki/i/lNstxW54rty66Z2MYg5OgyWqWLsdb6iFbixHlmVi92TvZ0Lq6ppUEn6GdMyCwjDjkuvToq-BWFbO2pJ6jmt37Q.webp"
+            alt="">
+        <h2>1. 나루토</h2>
+    </div>
+    <script>
+        let 이미지 = document.querySelector("img")
+        let h2 = document.querySelector("h2")
+        a = 1
+        console.log("asd")
+        document.addEventListener("keydown", function (event) {
+            console.log(event)
+            if (event.key == "ArrowRight") {
+                if (a == 1) {
+                    a = 2
+                    h2.textContent = "1. 나루토"
+                    이미지.setAttribute('src', 'https://i.namu.wiki/i/lNstxW54rty66Z2MYg5OgyWqWLsdb6iFbixHlmVi92TvZ0Lq6ppUEn6GdMyCwjDjkuvToq-BWFbO2pJ6jmt37Q.webp')
+                }
+                else if (a == 2) {
+                    a = 3
+                    h2.textContent = "2. 선인 모드"
+                    이미지.setAttribute('src', 'https://i.namu.wiki/i/hIhGr2Q4PO3nGV0WQpGQDaoS1EDX05LT-m8xju6Wba8Z5zJ0j-S-1wMu40G5EFTPsa6EPKkqr25guf2oPKGzUw.webp')
+                } else if (a == 3) {
+                    a = 4
+                    h2.textContent = "3. 구미 차크라 모드"
+                    이미지.setAttribute('src', 'https://i.namu.wiki/i/OZ5vTpn2ugo8fC1CaZwK2Pnb7j94jdWdACcFFcHcqwjPmqCtvBjuh4ba_kWhgtEJn-7ISxxQN94vQziV4gk9cw.webp')
+                } else if (a == 4) {
+                    a = 1
+                    h2.textContent = "4. 육도선인 모드"
+                    이미지.setAttribute('src', 'https://i.namu.wiki/i/JsQOcRew0pU31I3rDkNSvZQSM-32SVXjShbJRAvouQImr-G6Gw4Ftg26_1MLTMqmlv4Etx0xNjoKylsPD1RFKhgv3I5BPLsVzLeG2VQbcxNOlLoS9a_b7dsOJHsflG3dGIWFgrmZUVmvBopzRStFTA.webp')
+                }
+            }
+            else if (event.key == "ArrowLeft") {
+                if (a == 1) {
+                    a = 4
+                    h2.textContent = "1. 나루토"
+                    이미지.setAttribute('src', 'https://i.namu.wiki/i/lNstxW54rty66Z2MYg5OgyWqWLsdb6iFbixHlmVi92TvZ0Lq6ppUEn6GdMyCwjDjkuvToq-BWFbO2pJ6jmt37Q.webp')
+                }
+                else if (a == 2) {
+                    a = 1
+                    h2.textContent = "2. 선인 모드"
+                    이미지.setAttribute('src', 'https://i.namu.wiki/i/hIhGr2Q4PO3nGV0WQpGQDaoS1EDX05LT-m8xju6Wba8Z5zJ0j-S-1wMu40G5EFTPsa6EPKkqr25guf2oPKGzUw.webp')
+                }
+                else if (a == 3) {
+                    a = 2
+                    h2.textContent = "3. 구미 차크라 모드"
+                    이미지.setAttribute('src', 'https://i.namu.wiki/i/OZ5vTpn2ugo8fC1CaZwK2Pnb7j94jdWdACcFFcHcqwjPmqCtvBjuh4ba_kWhgtEJn-7ISxxQN94vQziV4gk9cw.webp')
+                }
+                else if (a == 4) {
+                    a = 3
+                    h2.textContent = "4. 육도선인 모드"
+                    이미지.setAttribute('src', 'https://i.namu.wiki/i/JsQOcRew0pU31I3rDkNSvZQSM-32SVXjShbJRAvouQImr-G6Gw4Ftg26_1MLTMqmlv4Etx0xNjoKylsPD1RFKhgv3I5BPLsVzLeG2VQbcxNOlLoS9a_b7dsOJHsflG3dGIWFgrmZUVmvBopzRStFTA.webp')
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>대한민국 관광지(a,s,d,f)</h1>
+    <div style="border: 2px solid black;width:800px;height:400px;text-align: center;padding:15px">
+        <img src="https://i.namu.wiki/i/d_qz_L03CFawD901fPnbj3LGn80RauYbOp_CKtl2GyBqlo6sqXVDB0Xj1JttxT5w0ssN-sM90FAX_SQNec80jgxhPRqrTaLH9nI5MACt19mB153FNLR2YQR55fff5wnwPFQFIyLLNK6YlS60NLQvcg.webp"
+            alt="">
+        <h2 style="text-align: center;">광화문</h2>
+    </div>
+    <script>
+        let 이미지 = document.querySelector("img")
+        let h2 = document.querySelector("h2")
+        document.addEventListener("keypress", function (event) {
+            if (event.key == "a") {
+                h2.textContent = "광화문"
+                이미지.setAttribute('src', 'https://i.namu.wiki/i/d_qz_L03CFawD901fPnbj3LGn80RauYbOp_CKtl2GyBqlo6sqXVDB0Xj1JttxT5w0ssN-sM90FAX_SQNec80jgxhPRqrTaLH9nI5MACt19mB153FNLR2YQR55fff5wnwPFQFIyLLNK6YlS60NLQvcg.webp')
+            } else if (event.key == "s") {
+                h2.textContent = "남산서울타워"
+                이미지.setAttribute('src', 'https://i.namu.wiki/i/zPviS3Ua3x0wGdIW6mLZZJY1a5cKMnDPMl6maoE5BRpzIUf7aKM5KYG3jRAmSLMFzU0WFlhDHUtJ98MdiDp9btxI7RE4lE37D6XQzxIuuopnXjL7zSb8ChTE9mu40uhn-lI8UuATE9JFWH9rOjtw0A.webp')
+            } else if (event.key == "d") {
+                h2.textContent = "해운대"
+                이미지.setAttribute('src', 'https://i.namu.wiki/i/PhT-ymi5Rk6Pe74vukr0Gm2Etg2ExLqymB4ANByReol7KCnVr-9PuKpU26fLM4lITicMvZVypFjaQ-nIUUKjwsVlQMhJSNv6ZYnn7Zg3hFWugdLvMSm_f1vm8bLlTLOdjV1x6ifRvgdSbOfHLwUJJQ.webp')
+            } else if (event.key == "f") {
+                h2.textContent = "불국사"
+                이미지.setAttribute('src', 'https://i.namu.wiki/i/OQ-I-5wW2x6dm2c8oTQj2afFC-_ajhHhNlPfRxA_zRbBr73dqVEs4424RGpFG1xDpB0YDbhsJf1BxrinYI-4M-YI6lKNkirSaQiRJPGMrnfYg_qYrr0lXMKUnmP9hFutRNRY5qL2RR7zlgMkw3vLXA.webp')
+            }
+        })
+    </script>
+</body>
+
+</html>
