@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+
+        .전체 {
+            width: 1200px;
+            height: 800px;
+        }
+
+        .box {
+            clear: both;
+        }
+
+        .머리 div {
+            height: 100px;
+            float: left;
+        }
+
+        .위1 {
+            width: 200px;
+            background-color: aqua;
+        }
+
+        .위2 {
+            width: 1000px;
+            background-color: blue;
+        }
+
+        .가운데 div {
+            float: left;
+            width: 1200px;
+            height: 300px;
+            background-color: gold;
+        }
+
+        .가운데0 {
+            float: left;
+            text-align: center;
+        }
+
+        .가운데1 {
+            width: 400px;
+            height: 200px;
+            background-color: burlywood;
+        }
+
+        .가운데2 {
+            width: 400px;
+            height: 200px;
+            background-color: crimson;
+        }
+
+        .가운데3 {
+            width: 400px;
+            height: 200px;
+            background-color: deeppink;
+        }
+
+        .아래 div {
+            height: 100px;
+            float: left;
+        }
+
+        .아래1 {
+            width: 200px;
+            background-color: cornflowerblue;
+        }
+
+        .아래2 {
+            width: 800px;
+            background-color: darkgreen;
+        }
+
+        .아래3 {
+            width: 200px;
+            background-color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="전체">
+        <header>
+            <div class="box 머리">
+                <div class="위1" style="float: left;">
+                    <h1>200px 100px</h1>
+                </div>
+                <div class="위2" style="float:left;">
+                    <h1>100px 100px</h1>
+                </div>
+            </div>
+        </header>
+        <section class="box 가운데">
+            <div>
+                <div>
+                    <h2>1200px*300px</h2>
+                </div>
+                <div>
+                    <h2>모든 것의 margin, padding은 0으로</h2>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="box 가운데0">
+                    <h2 class="가운데1" style="float: left;">div1/400px*200px</h2>
+                </div>
+                <div>
+                    <h2 class="가운데2" style="float: left;">div2/400px*200px</h2>
+                </div>
+                <div>
+                    <h2 class="가운데3" style="float: left;">div3/400px*200px</h2>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="box 아래">
+                <div class="아래1" style="float: left;">
+                    <h1>200px</h1>
+                </div>
+                <div>
+                    <div class="아래2" style="float: left;">
+                        <h1>800px*100px</h1>
+                    </div>
+                </div>
+                <div class="아래3" style="float: left;">
+                    <h1>200px</h1>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
