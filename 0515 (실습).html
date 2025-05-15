@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0eeee;
+        }
+
+        #전체 {
+            width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        header {
+            width: 1200px;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+
+        #메뉴 {
+            display: inline-block;
+            padding: 10px;
+            border: 3px solid gainsboro;
+            border-radius: 25px;
+            margin-bottom: 40px;
+        }
+
+        section {
+            width: 1200px;
+            height: 400px;
+            background-color: #fff;
+            margin-top: 20px;
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        #리스트 {
+            float: left;
+            margin-left: 30px;
+        }
+
+        article {
+            width: 570px;
+            height: 340px;
+            border-radius: 30px;
+        }
+
+        #왼쪽 {
+            background-color: #f0eeee;
+            float: left;
+        }
+
+        #리스트0 {
+            line-height: 40px;
+        }
+
+        #리스트1::before {
+            content: "hot";
+            background-color: red;
+            color: white;
+            padding: 3px;
+            border-radius: 5px;
+            margin-right: 3px;
+        }
+
+        #리스트2::before {
+            content: "hot";
+            background-color: red;
+            color: white;
+            padding: 3px;
+            border-radius: 5px;
+            margin-right: 3px;
+        }
+
+        #리스트3::before {
+            content: "new";
+            background-color: rgb(8, 69, 253);
+            color: white;
+            padding: 3px;
+            border-radius: 5px;
+            margin-right: 3px;
+        }
+
+        #리스트4::before {
+            content: "hot";
+            background-color: red;
+            color: white;
+            padding: 3px;
+            border-radius: 5px;
+            margin-right: 3px;
+        }
+
+        #리스트5::before {
+            content: "🤍";
+            background-color: rgb(246, 49, 197);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 3px;
+        }
+
+        #리스트6::before {
+            content: "🤍";
+            background-color: rgb(246, 49, 197);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 3px;
+        }
+
+        #오른쪽 {
+            background-color: #f0eeee;
+            float: right;
+            padding: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tr:nth-of-type(2n+1) {
+            background-color: bisque;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        #아래 {
+            width: 1200px;
+            height: 400px;
+        }
+
+        #아래1 {
+            float: left;
+            width: 350px;
+        }
+
+        #아래2 {
+            float: left;
+            width: 350px;
+        }
+
+        #아래3 {
+            float: left;
+            width: 350px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="전체">
+        <header>
+            <img width="150px"
+                src="https://purepng.com/public/uploads/large/purepng.com-aecom-logologobrand-logoiconslogos-251519939890kydbk.png"
+                alt="">
+            <h3>width1200px/아래메뉴 가상클래스 적용하기</h3>
+        </header>
+        <nav>
+            <ul>
+                <li id="메뉴">메뉴</li>
+                <li id="메뉴">공지사항</li>
+                <li id="메뉴">갤러리</li>
+                <li id="메뉴">마이페이지</li>
+                <li id="메뉴">커뮤니티</li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <main>
+            <section>
+                <h3 style="text-align: center;">section 영역 width:1200px height:400px</h3>
+                <article id="왼쪽">
+                    <div id="리스트">
+                        <h3 style="margin-top: 10px;">width:570px height:340px</h3>
+                        <h1>세겨 둘 메세지</h1>
+                        <ul id="리스트0">
+                            <li id="리스트1">지금 아니면 못 할 것을 하며 살아라.</li>
+                            <li id="리스트2">사람은 저마다 갈 길이 다르다. 자기 길을 가라.</li>
+                            <li id="리스트3">남이 돕는다고 따라가면 자기 길 못 가고 얻을 것 못 얻는다.</li>
+                            <li id="리스트4">자랑할 것이 있게 행동해라</li>
+                            <li id="리스트5">모든 삶의 이치는 동일하다. 1등 하려면 힘들다.</li>
+                            <li id="리스트6">제대로 못 했어도 포기하지 말고 교정하면 되는 것도 있다.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="오른쪽">
+                    <h3 style="margin-top: 10px;">width:570px height:340px</h3>
+                    <table border="1">
+                        <tr>
+                            <td>table 홀수 줄에 색깔 넣기</td>
+                            <td>table 홀수 줄에 색깔 넣기</td>
+                        </tr>
+                        <tr>
+                            <td>CSS에 tr:nth-of-type 스타일 사용</td>
+                            <td>CSS에 tr:nth-of-type 스타일 사용</td>
+                        </tr>
+                        <tr>
+                            <td>홀수는 odd</td>
+                            <td>홀수는 odd</td>
+                        </tr>
+                        <tr>
+                            <td>짝수는 even</td>
+                            <td>짝수는 even</td>
+                        </tr>
+                        <tr>
+                            <td>홀수 줄</td>
+                            <td>홀수 줄</td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <section>
+            <h3>section 영역 width:1200px height:400px</h3>
+            <h3>div로 박스 3개 구현, width:350px</h3>
+            <div id="아래">
+                <div id="아래1">
+                    <img src="https://cdn.inflearn.com/public/courses/325969/cover/2868c757-5886-4508-a140-7cb68a83dfd8/325969-eng.png?f=avif&w=420"
+                        alt="">
+                    <p>스프링</p>
+                </div>
+                <div id="아래2"><img
+                        src="https://cdn.inflearn.com/public/files/courses/334085/cover/01jp4nax3bvy337bvvfkc58563?f=avif&w=420"
+                        alt="">
+                    <p>도커</p>
+                </div>
+                <div id="아래3">
+                    <img src="https://cdn.inflearn.com/public/files/courses/334085/cover/01jp4nax3bvy337bvvfkc58563?f=avif&w=420"
+                        alt="">
+                    <p>기모찌</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
