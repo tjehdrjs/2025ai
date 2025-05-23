@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>애국가 타자연습</h1>
+  <p>타이핑을 하여 내용이 일치하면 ok표시</p>
+  <p>ok 표시를 위한 태그는 span 사용 권장</p>
+  <hr>
+  <h2>input 이벤트와 조건문을 활용</h2>
+  <h3>값을 입력하면 맞는지 점검함</h3>
+  <label for="">동해물과<input type="text" id="동해물"><span id="ok1"></span></label>
+  <br>
+  <br>
+  <label for="">백두산이 <input type="text" id="백두산"><span id="ok2"></span></label>
+  <br>
+  <h2>키보드 이벤트 활용</h2>
+  <h3>Enter를 누르면 확인함</h3>
+  <label for="">마르고<input type="text" id="마르고"><span id="ok3"></span></label>
+  <br>
+  <br>
+  <label for="">닳도록<input type="text" id="닳도록"><span id="ok4"></span></label>
+
+  <script>
+    let 동해물 = document.querySelector("#동해물")
+    let 오케이1 = document.querySelector("#ok1")
+
+    let 백두산 = document.querySelector("#백두산")
+    let 오케이2 = document.querySelector("#ok2")
+
+    let 마르고 = document.querySelector("#마르고")
+    let 오케이3 = document.querySelector("#ok3")
+
+    let 닳도록 = document.querySelector("#닳도록")
+    let 오케이4 = document.querySelector("#ok4")
+
+
+
+    동해물.addEventListener("input", function () {
+      if (동해물.value == "동해물과") {
+        오케이1.textContent = "ok"
+      }
+      else {
+        오케이1.textContent = "x"
+      }
+    })
+
+    백두산.addEventListener("input", function () {
+      if (백두산.value == "백두산이") {
+        오케이2.textContent = "ok"
+      }
+      else {
+        오케이2.textContent = "x"
+      }
+    })
+
+    마르고.addEventListener("keydown", function (e) {
+      if (e.key == "Enter") {
+        if (마르고.value == "마르고") {
+          오케이3.textContent = "ok"
+        } else {
+          오케이3.textContent = "x"
+        }
+      }
+    })
+
+    닳도록.addEventListener("keydown", function (e) {
+      if (e.key == "Enter") {
+        if (닳도록.value == "닳도록") {
+          오케이4.textContent = "ok"
+        } else {
+          오케이4.textContent = "x"
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

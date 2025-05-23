@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: lightpink;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      align-items: center;
+    }
+
+    input {
+      width: 250px;
+      height: 30px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #AAA;
+      height: 70px;
+      align-items: center;
+    }
+
+    .Left {
+      flex: 1;
+      text-align: center;
+
+    }
+
+    .center {
+      flex: 8;
+    }
+
+    .right {
+      flex: 1;
+      text-align: center;
+    }
+
+    .favorite {
+      color: tomato;
+      cursor: pointer;
+    }
+
+    .done {
+      color: rgb(86, 228, 86);
+      cursor: pointer;
+
+    }
+
+    .close {
+      color: rgb(228, 77, 77);
+      cursor: pointer;
+    }
+
+    .ok {
+      color: #ccc;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Todo</h1>
+    <input type="text">
+  </header>
+  <section>
+  </section>
+  <script>
+    const 인풋 = document.querySelector("input") //const: 값 변경 불가
+
+    const 섹션 = document.querySelector("section")
+    인풋.addEventListener("keydown", function (event) { // enter 누르는것 감지
+      if (event.key == "Enter") {
+        console.log("엔터 눌렀음")
+        console.log(인풋.value)
+
+
+
+        //section에다가 할 일을 추가하기
+
+        // 전체 큰 div 만들고
+        let task = document.createElement("div")
+        task.classList.add("task")
+        console.log(task)
+
+        //왼쪽
+        let 왼쪽 = document.createElement("div")
+        왼쪽.classList.add("Left")
+        let 하트 = document.createElement("i")
+        하트.classList.add("material-icons")
+        하트.classList.add("favorite")
+        하트.textContent = "favorite_border"
+        하트.addEventListener("click", function () {
+          if (하트.textContent == "favorite_border") {
+            하트.textContent = "favorite"
+          }
+          else if (하트.textContent == "favorite") {
+            하트.textContent = "favorite_border"
+          }
+        })
+        왼쪽.appendChild(하트)
+        task.appendChild(왼쪽)
+
+        // 중앙
+        let 중간 = document.createElement("div")
+        중간.classList.add("center")
+        중간.textContent = 인풋.value //input으로 입력한 내용 넣기
+        task.appendChild(중간)// 부모.appendChild(자식)
+        인풋.value = "" //입력한 초기화
+
+
+        //오른쪽
+        let 오른쪽 = document.createElement("div")
+        오른쪽.classList.add("right")
+        task.appendChild(오른쪽)
+
+        let 체크 = document.createElement("i") // 체크 생성
+        체크.classList.add("material-icons")
+        체크.classList.add("done")
+        체크.textContent = "done"
+        체크.addEventListener("click", function () {
+          중간.classList.add("ok") //글씨색 바꾸기 : ok 클래스 추가
+          체크.style.display = "none" // 체크 버튼 숨기기
+        })
+        오른쪽.appendChild(체크)
+
+        let 삭제 = document.createElement("i") // 삭제 생성
+        삭제.classList.add("material-icons")
+        삭제.classList.add("close")
+        삭제.classList.add("close")
+        삭제.textContent = "close"
+        삭제.addEventListener("click", function () {
+          섹션.removeChild(task) // 부모.removeChild(자식)
+        })
+        오른쪽.appendChild(삭제)
+
+        섹션.appendChild(task) // 부모.appendChild(자식)
+      }
+    })
+  </script>
+</body>
+
+</html>
