@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .컨테이너 {
+      width: 940px;
+      height: 940px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      margin: 20px auto;
+      gap: 20px;
+    }
+
+    .아이템 {
+      opacity: 80%;
+    }
+
+    .아이템 h2 {
+      position: relative;
+      top: 50px;
+      color: white;
+      text-shadow: 100px;
+    }
+
+    .아이템:hover {
+      opacity: 100%;
+      cursor: pointer;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>그리드를 이용한 실습</h1>
+  <h3>각각의 박스 : 300px * 300px, 그리드 여백 20px</h3>
+  <h3>글씨에 그림자 넣기</h3>
+  <h3>글씨 위치는 position을 이용해 조절할 수 있음</h3>
+  <h3>박스 전체를 클릭 가능한 영역으로 만들 것 + 박스에 마우스 올리면 밝아짐</h3>
+  <h3>배경이미지는 어둡게 처리. opacity 속성 활용할 것</h3>
+  <hr>
+  <div class="컨테이너">
+    <div class="아이템">
+      <h2>기모찌</h2>
+      <img
+        src="https://imageoptimzer.acon3d.com/?image=https%3A%2F%2Fstorage.acon3d.com%2Fproduct%2F97edd7e2a7304916b7d6e4f2685faf4c&width=2600&quality=70&watermark=true"
+        alt="">
+
+    </div>
+    <div class="아이템">
+      <h2>기모찌</h2>
+      <img src="https://pimg.mk.co.kr/news/cms/202308/10/news-p.v1.20230809.d9ec0ff8995a47aaa2299cbafdcbe800_P1.jpg"
+        alt="">
+    </div>
+    <div class="아이템">
+      <h2>기모찌</h2>
+      <img src="https://imagescdn.gettyimagesbank.com/500/201403/a7484180.jpg" alt="">
+    </div>
+    <div class="아이템">
+      <h2>기모찌</h2>
+      <img src="https://windowsforum.kr/files/attach/images/2966154/289/493/002/96e2fe493a5ace9f825fc927689b6cb3.jpg"
+        alt="">
+    </div>
+    <div class="아이템">
+      <h2>기모찌</h2>
+      <img src="https://cdn.crowdpic.net/detail-thumb/thumb_d_CC6A5AE648A6AC65A0C97FBC6B97E7C1.jpg" alt="">
+    </div>
+    <div class="아이템">
+      <h2>기모찌</h2><img
+        src="https://photo.coolenjoy.co.kr/data/editor/1912/thumb-Bimg_6fb2c00448912f8d149e196c095cd299_46vl.jpg"
+        alt="">
+    </div>
+    <div class="아이템">
+      <h2>기모찌</h2>
+      <img
+        src="https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=11288707&filePath=L2Rpc2sxL25ld2RhdGEvMjAxNS8wMi9DTFM2OS9OVVJJXzAwMV8wMTkzX251cmltZWRpYV8yMDE1MTIwMw==&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10006"
+        alt="">
+    </div>
+    <div class="아이템">
+      <h2>기모찌</h2><img
+        src="https://png.pngtree.com/background/20211216/original/pngtree-k-chongqing-cyberpunk-style-cbd-night-view-lights-overpass-traffic-traffic-picture-image_1539085.jpg"
+        alt="">
+    </div>
+    <div class="아이템">
+      <h2>기모찌</h2>
+      <img src="https://photo.coolenjoy.co.kr/data/editor/1912/thumb-Bimg_6fb2c00448912f8d149e196c095cd299_uf9i.jpg"
+        alt="">
+    </div>
+  </div>
+</body>
+
+</html>
