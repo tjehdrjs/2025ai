@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .전체 {
+      width: 920;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .봇치 {
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      overflow: hidden
+    }
+
+    .봇치 img {
+      width: 300px;
+      height: 200px;
+    }
+
+    .봇치1 {
+      width: 300px;
+      height: 200px;
+      background-color: #0005;
+      color: #fff;
+      text-align: center;
+      padding-top: 20px;
+      opacity: 0;
+      transition: 0.4s;
+      padding-top: 20px;
+    }
+
+    .봇치:hover .봇치1 {
+      opacity: 1;
+      transform: translate(0px, -200px);
+      overflow: hidden
+    }
+  </style>
+</head>
+
+<body>
+  <h1>마우스 올리면 상세 설명 표시</h1>
+  <div class="전체">
+    <div class="봇치"><img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTaP4bBJSODGkceVm_IuiknKqaw-R-XfcVdg&s" alt="">
+      <div class="봇치1">
+        <h2>봇치</h2>
+        <p>귀엽다</p>
+      </div>
+    </div>
+    <div class="봇치"><img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvR5GjDH0chQaaL8AEJ8JMigY9at5sjzh0jz0isSKW6FSQaBnppzejbMvSJgYYHnJoQu0&usqp=CAU"
+        alt="">
+      <div class="봇치1">
+        <h2>봇치</h2>
+        <p>귀엽다</p>
+      </div>
+    </div>
+    <div class="봇치">
+      <img
+        src="https://lh3.googleusercontent.com/proxy/EHsvpC2sdY6slDA1jY2cZO7PoUUMlHwtbCPAX6R4qMqGgF41iOD2SGwMVUjudffDU8Y1SIVaYXd0yZ8FcBuP6qECRlk46SPwVJfm8D-Rdg8wkybh-leLd1YUcSP9V3mrZ4wJ_4yyQQuLVVjlhqr49mBPqFHUG-Acafn96SIXpRshvoNyh6gEhkRnyfPN3jspkKQBbC7BAx8AlDQcJV1H7jo3xYkJKSpkJ9Q"
+        alt="">
+      <div class="봇치1">
+        <h2>봇치</h2>
+        <p>귀엽다</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+</body>
+
+</html>
