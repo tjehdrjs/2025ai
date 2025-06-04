@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>주문서</h1>
+  <h3>먹고 싶은 메뉴를 선택합니다</h3>
+  <label for=""><input type="checkbox" id="치킨" value="치킨">치킨 16,000</label>
+  <br>
+  <br>
+  <label for=""><input type="checkbox" id="초밥" value="초밥">초밥 20,000</label>
+  <br>
+  <br>
+  <label for=""><input type="checkbox" id="순대" value="순대">순대 5,000</label>
+  <hr>
+  <h2 id="output">가격 : 0</h2>
+  <script>
+    const 치킨 = document.querySelector("#치킨")
+    const 초밥 = document.querySelector("#초밥")
+    const 순대 = document.querySelector("#순대")
+    let 가격 = 0
+    const output = document.querySelector("#output")
+    치킨.addEventListener("click", function () {
+      if (치킨.checked == true) {
+        output.textContent = `가격: ${가격 += 16000}`
+      }
+      else if (치킨.checked == false) {
+        output.textContent = `가격: ${가격 -= 16000}`
+      }
+    })
+    초밥.addEventListener("click", function () {
+      if (초밥.checked == true) {
+        output.textContent = `가격: ${가격 += 20000}`
+      }
+      else if (초밥.checked == false) {
+        output.textContent = `가격: ${가격 -= 20000}`
+      }
+    })
+    순대.addEventListener("click", function () {
+      if (순대.checked == true) {
+        output.textContent = `가격: ${가격 += 5000}`
+      }
+      else if (순대.checked == false) {
+        output.textContent = `가격: ${가격 -= 5000}`
+      }
+    })
+  </script>
+</body>
+
+</html>
