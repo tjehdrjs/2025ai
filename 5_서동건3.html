@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .box1 {
+      display: flex;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 2px solid black;
+    }
+
+    .item1 {
+      flex: 0.1;
+      margin-left: 10px;
+    }
+
+    .item1:hover {
+      cursor: pointer;
+    }
+
+    .item2 {
+      flex: 0.1;
+      margin-left: 10px;
+
+    }
+
+    .item2:hover {
+      cursor: pointer;
+    }
+
+    .item3 {
+      flex: 0.3;
+      margin-left: 10px;
+
+    }
+
+    .item3:hover {
+      cursor: pointer;
+    }
+
+    .item4 {
+      flex: 4;
+
+    }
+
+    .item4:hover {
+      cursor: pointer;
+    }
+
+    .item5 {
+      flex: 4;
+
+    }
+
+    .item5:hover {
+      cursor: pointer;
+    }
+
+    .item6 {
+      flex: 0.1;
+      margin-right: 10px;
+
+
+    }
+
+    .item6:hover {
+      cursor: pointer;
+    }
+
+    .item7 {
+      flex: 0.1;
+      margin-right: 10px;
+
+
+    }
+
+    .item7:hover {
+      cursor: pointer;
+    }
+
+    .item8 {
+      flex: 0.1;
+      margin-right: 10px;
+
+
+    }
+
+    .item8:hover {
+      cursor: pointer;
+    }
+
+    .box2 {
+      height: 300px;
+      background-color: #8ee180;
+      padding-top: 30px;
+      padding-left: 30px;
+      border-bottom: 2px solid black;
+
+    }
+
+    .ul {
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid black;
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+
+    .box3 {
+      height: 50px;
+      border-bottom: 2px solid black;
+    }
+
+    .box4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      background-color: yellow;
+      border-bottom: 2px solid black;
+
+    }
+
+    .box5 {
+      height: 300px;
+      border-bottom: 2px solid black;
+    }
+
+    .화살표 {
+      display: flex;
+    }
+
+    #왼쪽 {
+      font-size: 60px;
+      color: white;
+      position: relative;
+      bottom: 180px;
+    }
+
+    #왼쪽:hover {
+      cursor: pointer;
+    }
+
+    #오른쪽 {
+      font-size: 60px;
+      color: white;
+      position: relative;
+      bottom: 200px;
+      left: 95%;
+
+    }
+
+    #오른쪽:hover {
+      cursor: pointer;
+    }
+
+    .box6 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      background-color: rgb(190, 76, 203);
+      border-bottom: 2px solid black;
+    }
+
+    .box7 {}
+
+    #왼쪽1 {
+      font-size: 60px;
+      color: white;
+      position: relative;
+      bottom: 180px;
+    }
+
+    #왼쪽1:hover {
+      cursor: pointer;
+    }
+
+    #오른쪽1 {
+      font-size: 60px;
+      color: white;
+      position: relative;
+      bottom: 200px;
+      left: 95%;
+
+    }
+
+    #오른쪽1:hover {
+      cursor: pointer;
+    }
+
+    #이미지1::after {
+      opacity: 1;
+    }
+
+    #이미지1::before {
+      opacity: 0;
+      transition: 1s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="box1">
+      <h4 class="item1">ABOUT</h4>
+      <h4 class="item2">PORTFOLIO</h4>
+      <h4 class="item3">AIBUM</h4>
+      <h4 class="item4">CONTACK</h4>
+      <h2 class="item5">AI-COM</h2>
+      <img width="40px" height="40px" class="item6"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+        alt="">
+      <img width="40px" height="40px" class="item7"
+        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="">
+      <img width="40px" height="40px" class="item8" src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt="">
+    </div>
+  </header>
+  <section>
+    <div class="box2">
+      <h2 style="margin-bottom:20px">AI 컴퓨터과</h2>
+      <h3 style="margin-bottom:20px">이곳에서 펼쳐질 잔인한 내 삶을 위해</h3>
+      <p>"현재는 불가능하여도 조금씩하다 보면 불가능했던 일들이 점점 가벼워진다"</p>
+      <p style="margin-bottom:20px">이곳에서 점점 발전하는 나를 발견합니다.</p>
+      <ul class="ul">
+        <li>
+          <h4>학과소개</h4>
+        </li>
+        <li>
+          <h4>교육과정</h4>
+        </li>
+        <li>
+          <h4>구성원 안내</h4>
+        </li>
+        <li>
+          <h4>프로그램 소개</h4>
+        </li>
+        <li>
+          <h4>앨범</h4>
+        </li>
+        <li>
+          <h4>동아리 활동</h4>
+        </li>
+      </ul>
+    </div>
+    <div class="box3">
+      기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모띠기모
+    </div>
+    <div class="box4">
+      <h3>일반 슬라이드</h3>
+    </div>
+    <div class="box5">
+      <img height="300px" width="100%" id="이미지"
+        src="https://png.pngtree.com/thumb_back/fh260/background/20190220/ourmid/pngtree-hand-painted-beautiful-literary-romantic-image_7292.jpg"
+        alt="">
+      <div class="화살표">
+        <p id="왼쪽">←</p>
+        <p id="오른쪽">→</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="box6">
+      <h3>페이드</h3>
+    </div>
+    <div class="box7">
+      <img width="100%" height="350px" id="이미지1" src="https://img.sbs.co.kr/newimg/news/20230130/201746236_1280.jpg"
+        alt="">
+      <div class="화살표">
+        <p id="왼쪽1">←</p>
+        <p id="오른쪽1">→</p>
+      </div>
+  </footer>
+  <script>
+    let 이미지 = document.querySelector("#이미지")
+    let 왼쪽 = document.querySelector("#왼쪽")
+    let 오른쪽 = document.querySelector("#오른쪽")
+    a = 1
+    왼쪽.addEventListener("click", function (e) {
+      console.log(e)
+      if (a == 1) {
+        a = 3
+        이미지.setAttribute('src', 'https://cdn.pixabay.com/photo/2023/08/14/15/42/milkyway-8190232_640.jpg')
+
+      }
+      else if (a == 2) {
+        a = 1
+        이미지.setAttribute('src', "https://png.pngtree.com/thumb_back/fh260/background/20190220/ourmid/pngtree-hand-painted-beautiful-literary-romantic-image_7292.jpg")
+
+      }
+      else if (a == 3) {
+        a = 2
+        이미지.setAttribute('src', 'https://img.activityjapan.com/wi/starry-sky-spot_thumb.jpg')
+
+
+      }
+    })
+    오른쪽.addEventListener("click", function (e) {
+      console.log(e)
+      if (a == 1) {
+        a = 2
+        이미지.setAttribute('src', 'https://img.activityjapan.com/wi/starry-sky-spot_thumb.jpg')
+      }
+      else if (a == 2) {
+        a = 3
+        이미지.setAttribute('src', 'https://cdn.pixabay.com/photo/2023/08/14/15/42/milkyway-8190232_640.jpg')
+
+
+
+      }
+      else if (a == 3) {
+        a = 1
+        이미지.setAttribute('src', "https://png.pngtree.com/thumb_back/fh260/background/20190220/ourmid/pngtree-hand-painted-beautiful-literary-romantic-image_7292.jpg")
+
+
+      }
+    })
+    let 이미지1 = document.querySelector("#이미지1")
+    let 왼쪽1 = document.querySelector("#왼쪽1")
+    let 오른쪽1 = document.querySelector("#오른쪽1")
+    a = 1
+    왼쪽1.addEventListener("click", function (e) {
+      console.log(e)
+      if (a == 1) {
+        a = 3
+        이미지1.setAttribute('src', 'https://kkoma.net/web/product/big/201902/7b81fcb541411cafc9ee0784d4ebdbc9.jpg')
+
+      }
+      else if (a == 2) {
+        a = 1
+        이미지1.setAttribute('src', "https://img.sbs.co.kr/newimg/news/20230130/201746236_1280.jpg")
+
+      }
+      else if (a == 3) {
+        a = 2
+        이미지1.setAttribute('src', 'https://www.ana.co.jp/japan-travel-planner/area/chubu/nagano/0000008/main.jpg')
+
+
+      }
+    })
+    오른쪽1.addEventListener("click", function (e) {
+      console.log(e)
+      if (a == 1) {
+        a = 2
+        이미지1.setAttribute('src', 'https://www.ana.co.jp/japan-travel-planner/area/chubu/nagano/0000008/main.jpg')
+      }
+      else if (a == 2) {
+        a = 3
+        이미지1.setAttribute('src', 'https://kkoma.net/web/product/big/201902/7b81fcb541411cafc9ee0784d4ebdbc9.jpg')
+
+
+
+      }
+      else if (a == 3) {
+        a = 1
+        이미지1.setAttribute('src', "https://img.sbs.co.kr/newimg/news/20230130/201746236_1280.jpg")
+
+
+      }
+    })
+  </script>
+</body>
+
+</html>
