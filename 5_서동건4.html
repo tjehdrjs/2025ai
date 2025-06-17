@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .box1 {
+      background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0.02) 61%, rgba(0, 0, 0, 0.02) 73%), linear-gradient(33deg, rgba(255, 255, 255, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+      background-blend-mode: normal, color-burn;
+      height: 991px;
+      padding: 60px;
+    }
+
+    select {
+      position: relative;
+      top: 40px;
+      left: 800px;
+      width: 300px;
+      height: 30px;
+    }
+
+    option {
+      text-align: center;
+    }
+
+    .box2 {
+      background-color: darkgrey;
+      width: 1800px;
+      height: 150px;
+      margin: 0 auto;
+    }
+
+    .won {
+      width: 150px;
+      height: 130px;
+      background-color: black;
+      border-radius: 50%;
+      text-align: center;
+    }
+
+    .box3 {
+      width: 1800px;
+      height: 750px;
+      background-color: rgba(255, 255, 255, 0.658);
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .box4 {
+      width: 900px;
+    }
+
+    .묶음 {
+      margin-top: 100px;
+    }
+
+    .나라 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .나라이름 {
+      font-size: 40px;
+    }
+
+    .국기 {
+      width: 70px;
+      height: 40px;
+      margin-left: 15px;
+    }
+
+    .main {
+      display: flex;
+      justify-content: center;
+    }
+
+    .온도 {
+      font-size: 100px;
+    }
+
+    .체감온도 {
+      margin-left: 20px;
+    }
+
+    .아래 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .바람속도 {
+      margin-left: 130px;
+    }
+
+    .박스 {
+      display: flex;
+    }
+
+    .박스1 {
+      width: 300px;
+      height: 200px;
+      border-radius: 20px;
+      margin-left: 200px;
+      margin-top: 50px;
+      background-color: rgb(208, 207, 207);
+    }
+
+    .박스안 {
+      padding-top: 15px;
+      padding-left: 20px;
+    }
+
+    .벌 {
+      display: flex;
+    }
+
+    .꿀벌 {
+      margin-top: -100px;
+      margin-left: 130px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .박스2 {
+      width: 200px;
+      border-radius: 20px;
+      height: 200px;
+      margin-left: 10px;
+      margin-top: 50px;
+      background-color: rgb(208, 207, 207);
+    }
+
+    .박스안2 {
+      margin-top: 15px;
+      margin-left: 20px;
+    }
+
+    .박스3 {
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-top: 50px;
+      background-color: rgb(208, 207, 207);
+    }
+
+    .박스안3 {
+      margin-top: 15px;
+      margin-left: 20px;
+    }
+
+    .box5 {
+      width: 900px;
+    }
+
+    .나라사진 {
+      margin-top: 70px;
+      float: right;
+      margin-right: 150px;
+      width: 600px;
+      height: 600px;
+      border-radius: 20px;
+    }
+
+    .box6 {
+      background-color: #E4E4E1;
+      background-image: radial-gradient(at top center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%), linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(143, 152, 157, 0.60) 100%);
+      background-blend-mode: normal, multiply;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    <div class="box2">
+      <label for="">
+        <select name="" id="">
+          <option value="">서울</option>
+          <option value="">런던</option>
+          <option value="">바르셀로나</option>
+          <option value="">도쿄</option>
+        </select>
+      </label>
+    </div>
+    <div class="box3">
+      <div class="box4">
+        <div class="묶음">
+          <div class="나라">
+            <h1 class="나라이름">??</h1>
+            <img class="국기"
+              src="data:image/png;base64,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"
+              alt="">
+          </div>
+          <div class="main">
+            <h1 class="온도">?˚C</h1>
+            <h3 class="체감온도">feels like <p>??˚C</p>
+            </h3>
+          </div>
+          <div class="아래">
+            <h4 class="습도">humidity<p>??</p>
+            </h4>
+            <h4 class="바람속도">wind speed <p>??</p>
+            </h4>
+          </div>
+          <div class="박스">
+            <div class="박스1">
+              <div class="박스안">
+                <h3>temp</h3>
+                <h3>max</h3>
+                <h3>??</h3>
+                <h3>temp</h3>
+                <h3>min</h3>
+                <div class="벌">
+                  <h3>??</h3>
+                  <img class="꿀벌" src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3154.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="박스2">
+              <div class="박스안2">
+                <h2>Rainfall</h2>
+              </div>
+            </div>
+            <div class="박스3">
+              <div class="박스안3">
+                <h2>Latitude</h2>
+                <h2>??</h2>
+                <h2>Longitude</h2>
+                <h2>??</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box5">
+        <img class="나라사진"
+          src="https://i.namu.wiki/i/vzQIsovYmymvt84FWS9hhAS3Qva_O31fczg3ErMrSQrSgnJ9h3oQDf3kVo5M6aD1Q05-etvQRlqc3dnurUczXw.webp"
+          alt="">
+      </div>
+    </div>
+    <div class="box6"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <script></script>
+
+</body>
+
+</html>
