@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -12,11 +12,16 @@
       box-sizing: border-box;
     }
 
+    a {
+      text-decoration-line: none;
+    }
+
     .box1 {
       background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0.02) 61%, rgba(0, 0, 0, 0.02) 73%), linear-gradient(33deg, rgba(255, 255, 255, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
       background-blend-mode: normal, color-burn;
-      height: 991px;
-      padding: 60px;
+      height: 100%;
+      width: 100%;
+      padding-top: 60px;
     }
 
     select {
@@ -68,7 +73,7 @@
       justify-content: center;
     }
 
-    .나라이름 {
+    #나라이름 {
       font-size: 40px;
     }
 
@@ -78,16 +83,20 @@
       margin-left: 15px;
     }
 
+    .나라영어이름 {
+      margin-left: 10px;
+    }
+
     .main {
       display: flex;
       justify-content: center;
     }
 
-    .온도 {
+    #온도 {
       font-size: 100px;
     }
 
-    .체감온도 {
+    #체감온도 {
       margin-left: 20px;
     }
 
@@ -122,7 +131,7 @@
       display: flex;
     }
 
-    .꿀벌 {
+    #꿀벌 {
       margin-top: -100px;
       margin-left: 130px;
       width: 100px;
@@ -141,6 +150,10 @@
     .박스안2 {
       margin-top: 15px;
       margin-left: 20px;
+    }
+
+    .날씨 {
+      margin-top: 30px;
     }
 
     .박스3 {
@@ -174,7 +187,50 @@
       background-color: #E4E4E1;
       background-image: radial-gradient(at top center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%), linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(143, 152, 157, 0.60) 100%);
       background-blend-mode: normal, multiply;
-      height: 300px;
+      height: 344px;
+      width: 100%;
+    }
+
+    .box7 {
+      background-color: rgb(208, 207, 207);
+      width: 1800px;
+      height: 200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .기상청 {
+      position: relative;
+      bottom: 70px;
+      left: 500px;
+    }
+
+    .ul {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      width: 1000px;
+      height: 100px;
+      gap: 10px;
+      border-radius: 20PX;
+    }
+
+    li {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      color: white;
+      text-align: center;
+      background-color: darkgrey;
+      width: 100px;
+      height: 90px;
+      border-radius: 20px;
     }
   </style>
 </head>
@@ -183,11 +239,13 @@
   <div class="box1">
     <div class="box2">
       <label for="">
-        <select name="" id="">
-          <option value="">서울</option>
-          <option value="">런던</option>
-          <option value="">바르셀로나</option>
-          <option value="">도쿄</option>
+        <select id="select" name="" id="">
+          <option value="??">??</option>
+          <option value="seoul">서울</option>
+          <option value="new york">뉴욕</option>
+          <option value="london">런던</option>
+          <option value="barcelona">바르셀로나</option>
+          <option value="osaka">오사카</option>
         </select>
       </label>
     </div>
@@ -195,20 +253,21 @@
       <div class="box4">
         <div class="묶음">
           <div class="나라">
-            <h1 class="나라이름">??</h1>
+            <h1 id="나라이름">??</h1>
             <img class="국기"
-              src="data:image/png;base64,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"
+              src="https://mblogthumb-phinf.pstatic.net/MjAyMTA3MjJfMTUy/MDAxNjI2OTE3NjI5MzIw.MpddVnh8PLVpQBq4FiP00-m8NPulTwNmWrMIKyPys1Yg.sZlzccrSUkJXLkEdy4u2IFPY7ssSb2KpDgg4YCMWkaAg.PNG.dct8867/%EB%AC%BC%EC%9D%8C%ED%91%9C_%EB%A0%88%EB%93%9C_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B84x.png?type=w800"
               alt="">
+            <h1 class="나라영어이름"> ?</h1>
           </div>
           <div class="main">
-            <h1 class="온도">?˚C</h1>
-            <h3 class="체감온도">feels like <p>??˚C</p>
+            <h1 id="온도">?˚C</h1>
+            <h3 id="체감온도">feels like <p id="체온">??˚C</p>
             </h3>
           </div>
           <div class="아래">
-            <h4 class="습도">humidity<p>??</p>
+            <h4 class="습도">humidity<p id="습도1">??</p>
             </h4>
-            <h4 class="바람속도">wind speed <p>??</p>
+            <h4 class="바람속도">wind speed <p id="풍속">??</p>
             </h4>
           </div>
           <div class="박스">
@@ -216,26 +275,25 @@
               <div class="박스안">
                 <h3>temp</h3>
                 <h3>max</h3>
-                <h3>??</h3>
+                <h3 id="최고">??</h3>
                 <h3>temp</h3>
                 <h3>min</h3>
                 <div class="벌">
-                  <h3>??</h3>
-                  <img class="꿀벌" src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3154.png" alt="">
+                  <h3 id="최저">??</h3>
+                  <img id="꿀벌" src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3154.png" alt="">
                 </div>
               </div>
             </div>
             <div class="박스2">
               <div class="박스안2">
-                <h2>Rainfall</h2>
+                <h2>weather</h2>
+                <h2 class="날씨">??</h2>
               </div>
             </div>
             <div class="박스3">
               <div class="박스안3">
-                <h2>Latitude</h2>
-                <h2>??</h2>
-                <h2>Longitude</h2>
-                <h2>??</h2>
+                <h2>clouds</h2>
+                <h2 id="구름">??</h2>
               </div>
             </div>
           </div>
@@ -243,15 +301,102 @@
       </div>
       <div class="box5">
         <img class="나라사진"
-          src="https://i.namu.wiki/i/vzQIsovYmymvt84FWS9hhAS3Qva_O31fczg3ErMrSQrSgnJ9h3oQDf3kVo5M6aD1Q05-etvQRlqc3dnurUczXw.webp"
+          src="https://img.freepik.com/free-vector/question-mark-sign-brush-stroke-trash-style-typography-vector_53876-140880.jpg?semt=ais_hybrid&w=740"
           alt="">
       </div>
     </div>
-    <div class="box6"></div>
+    <div class="box6">
+      <div class="box7">
+        <div class="기상청">
+          <h2>기상청 바로가기</h2>
+        </div>
+        <ul class="ul">
+          <li><a href="http://www.khoa.go.kr/swtc/main.do" target="_blank" title="새창열림" id="swtc"><span>밀물·썰물</span>
+              <span>정보</span></a></li>
+          <li><a href="https://astro.kasi.re.kr/life/pageView/6" target="_blank" title="새창열림"><span>해와 달이
+              </span><span>뜨고지는 시각</span></a></li>
+          <li><a href="http://www.climate.go.kr" target="_blank" title="새창열림"><span>기후정보포털</span></a></li>
+          <li><a href="https://bd.kma.go.kr" target="_blank" title="새창열림"><span>기상기후</span><span>빅데이터</span></a></li>
+          <li><a href="https://www.airkorea.or.kr/web/dustForecast?pMENU_NO=113" target="_blank"
+              title="새창열림"><span>대기질</span><span>예·경보</span></a></li>
+          <li><a href="/w/theme/mountain-weather.do" target="_blank" title="새창열림"><span>산악날씨</span></a></li>
+          <li><a href="http://hrfco.go.kr/" target="_blank" title="새창열림"><span>한강홍수통제소</span></a></li>
+          <li><a href="https://marine.kma.go.kr/mmis" target="_blank"
+              title="새창열림"><span>해양기상</span><span>정보포털</span></a></li>
+          <li><a href="https://amo.kma.go.kr/" target="_blank" title="새창열림"><span>항공기상청</span></a></li>
+        </ul>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
 
+      const API_KEY = "47c44037a668e7569c5d4687b724255e"
 
-    <script></script>
+      const 도시명 = document.querySelector("#나라이름")
+      const 기온 = document.querySelector("#온도")
+      const 아이콘 = document.querySelector("#꿀벌")
+      const 체감온도 = document.querySelector("#체온")
+      const 풍속 = document.querySelector("#풍속")
+      const 습도 = document.querySelector("#습도1")
+      const 최고 = document.querySelector("#최고")
+      const 최저 = document.querySelector("#최저")
+      const 구름 = document.querySelector("#구름")
+      const 나라영어이름 = document.querySelector(".나라영어이름")
+      const 날씨 = document.querySelector(".날씨")
+
+      let 선택 = document.querySelector("#select")
+      선택.addEventListener("change", function (event) {
+        console.log(event.target.value)
+        getWeather(event.target.value)
+      })
+
+      function getWeather(city = "seoul") {
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+          .then(res => {
+            도시명.textContent = res.data.name;
+            기온.textContent = (res.data.main.temp - 273.15).toFixed(1);
+            아이콘.setAttribute("src", `https://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`);
+            체감온도.textContent = (res.data.main.feels_like - 273.15).toFixed(1);
+            풍속.textContent = res.data.wind.speed;
+            습도.textContent = res.data.main.humidity;
+            최고.textContent = (res.data.main.temp_max - 273.15).toFixed(1);
+            최저.textContent = (res.data.main.temp_min - 273.15).toFixed(1);
+            구름.textContent = res.data.clouds.all
+            나라영어이름.textContent = res.data.sys.country
+            날씨.textContent = res.data.weather[0].description
+
+            const 나라사진 = document.querySelector(".나라사진");
+            if (city === "seoul") {
+              나라사진.src = "https://i.namu.wiki/i/vzQIsovYmymvt84FWS9hhAS3Qva_O31fczg3ErMrSQrSgnJ9h3oQDf3kVo5M6aD1Q05-etvQRlqc3dnurUczXw.webp";
+            } else if (city === "new york") {
+              나라사진.src = "https://media.istockphoto.com/id/1454217037/ko/%EC%82%AC%EC%A7%84/%EB%A7%A8%ED%95%B4%ED%8A%BC-%EA%B8%88%EC%9C%B5-%EC%A7%80%EA%B5%AC-%EC%84%B8%EA%B3%84-%EB%AC%B4%EC%97%AD-%EC%84%BC%ED%84%B0-%EC%97%A0%ED%8C%8C%EC%9D%B4%EC%96%B4-%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8-%EB%B9%8C%EB%94%A9-%EB%B0%8F-%EB%B8%94%EB%A3%A8-%EC%8A%A4%EC%B9%B4%EC%9D%B4%EC%99%80-%EC%9E%90%EC%9C%A0%EC%9D%98-%EC%97%AC%EC%8B%A0%EC%83%81%EA%B3%BC-%EB%89%B4%EC%9A%95%EC%8B%9C-%EC%8A%A4%EC%B9%B4%EC%9D%B4-%EB%9D%BC%EC%9D%B8.jpg?s=612x612&w=0&k=20&c=3fukgypQN_MGXzH-sday3qIZH9W18yVoKbiRMkO_OX0=";
+            } else if (city === "london") {
+              나라사진.src = "https://upload.wikimedia.org/wikipedia/commons/c/cd/London_Montage_L.jpg";
+            } else if (city === "barcelona") {
+              나라사진.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMK1ti_srASJcvZk1sMXCmdRIJJ86UX9V8zQ&s";
+            } else if (city === "osaka") {
+              나라사진.src = "https://www.travelnbike.com/news/photo/201811/70261_122151_3921.jpg";
+            }
+            const 국기 = document.querySelector(".국기");
+            if (city === "seoul") {
+              국기.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAABJlBMVEX///8AAAAAR6DNLjoASKTr6+tISEipqan09PSBgYFOTk7w8PC+vr7V1dXQ0NDp6emIiIjb29uampo8PDzRLTZnZ2cXFxceHh4qKipXV1e3t7ekpKTLHy5fX18AL5evr698fHzTLTPKEyUAQJ4AN5shISF0dHSOjo4ANZoQEBD77/BBQUH34+TLGCkAO5zWLDAyQ5PJAh3QPUjehIrgjZI0NDTTTVb019nqsrXN0uGOOGinrctjd7De4erxzc/np6vtwMPbd33jmp7VWmKydIq0DzONeqCAGFlxh7qzJ0UqNYo5XqdkO4FwPHl4O3PacHaiNl1KQYiwMk+oNFdmPn6/MEO2MUtAQo2hNVu+MEOSOGaCOm5OZ6lmIm1ufrOjqsqLlr++wdegc0WUAAAKsklEQVR4nO1da1vbOBbOxdBACqGMp0DJUIhTGii50W7LLR1oZ2eZoWWhpaXQXVr+/59YS7YUy7GPZUeWlGf1fmn8tLWO3pz3nCNFl0LBwMDAwMDAwMDAwMDAwMDAwMBAPuZVGxCAJrZMFbfmVNvgY26rOKXaBozpYrG4oNoIjAXXkmnVRiA8KCIsq3eVuWVsyQPVdiDl+FDtKgvEEPXqmSWmqP5+HhBDZhUbErKkosgK3K4u306V2FGsuk8Pi4+UWDFffFgIqBjbog7TxIyn7kPF/XNGgRHrbrvIU54SY5TmHqqcFfT0K/q0JDsBzT9Gzf6KPq5ooB7WWx/6n2dkRpXKjN8qUs9QyepyD41qRDkeZAaVR7RVRj3Kck+EchAWpRqxSJrVQj3Ryin+gi2VMRabx+z/QhrWQT0xyqkVsEfnn4BmPJXWNFIPpJxn7ofH+boKTjfP0Cd91DNUDvp6WOX4Q4/1HJtf95rAgyxGPUOHla8eWDkBgnIBpeFRITb3vMit9RhAylkmT/mpZ540sYyeotUje8otPM4JfjV00J5nmCWlWoR6qrkLNxqAcubIw+NcLVgizaCxxEjuWZI/Lwsphxqbc94hzUTkntl179+sSsw9UM6hTp13gQKox0N1Vmbuocp5UohVzlLuVgDqQcC+LK1yo8r5DT2NVmvU0HxB6Y/IPYUp/3uTpJ5hzomt1uSEfaqe5+iJVQ+1Uc6cmx7KQWCcklXPE/IgRT0xOWcVPW2RJzmpkE37q4x6ZI57YnIOrtYy55zK9o6L7e20M3Rs7nkRVI/McQ+dlR5VDi0ZUlRrlbe/v3xv19vtRqPRbtft1y/fHW/z/3cg91D15D5jHZNzVhkDOZVTefvqdb9Rr9vlAOr1dn/35TGnOVQ9OMKz6vlNknoEKuftSb1RL0fD/ZuTt1xv8RPdpqc6JbMGPDmHRzmVd+VYQggt5Xc8Fj0LOqaK3MPmHOqcaXPO9qsEQggtr5JDi/tVbA6f5OeeGOXgIMavnMqrPg8jPiuJRj33Rji1f+CGpecenpyzlfSSPZuXEcxK+ZjLNFTaq8g9InLOzutGCkYQGu+TBVTDwRXPGsjNPexXwOacdU7l7PXtZBZCsBvHCZYtBhuPyT21sfsfhc34xqhyEsY5J/3UjCD0X8KvfUyaH1UP/eo24VdkxWpAOWzOoUaBytneTRNJgmi/BvXDDj2peoKGroqhYBRT0yP04+DFp5ydcnrdENhlkBR2WpymAurQ03lWbQ+y55w37cyMINTfQC9nQvxI7sm5uK/hEWhMzoHm1t6kzTdhNCBS6M9eEblnIZ/wGkKGnLOTNZQEPGUHeD+rHqZykwK2PGR/VIjBdvZQEiAFiinMj49swS0FpHjjV86uCE7sXaAFqh4m98j8gQePj/nHOSfjKwehfgK0EZF7ZuUuLXgaVg5Ure2NG18JGntAK3TGmqjnqdguJ6M6y84QAAv7dkRR4pICxFmqHlwSrM6qWjlMc85z4B8JCSYewJDynBizLraT6cAuA4nB3njFGos2pB4JC1+SQecnAOVUxcRXAighU/U8Ed9VflRXEpXzh2BOoNzjqWdF7R4Ez1Ug5Qz+KZQSOMxi9Sh1Eg+VFXAx+Z9dwZzUocmUR8UVVXuIWEAF7OBf4pKOjz5U4qvflpiM07+Ec1JPnsvXGpWWaOm4aKvu1Xg4/DsPTo5Vd2ssnH3YEM+J/V51t8bBoPUxB07K7RSrMbTDYec8F06gAl93HDm5+In9b9UdGwOOdZWVE9vewLAjc7nqjmXHoFW6zMKJvdG9ufh+fnV5+eH84qa7MUJLH6rv9cZhp9RLn4vt7qePJctFyQX64+pzN8TKBAeUU6dkpfeR255HxxBW75aV0ASXskcuJ5/T1fbdT70QIT4r34ION8FB1nE7kyoZ292rKEYwK5dBV4GmIPXGmtuXXgpO7C+RTuKTUvo6JKWvumtZ4aYdtyufuMVjf40lxGPlM+UXnC/QGYMm6sklb+ZJoiTILzjZpjP2W7gjX/kcxd5NosQFeRe4yEBn7GM/KV3zOcrGdTIlVo/4yYRzYl3wOMrGeXx4DZDywSO4wbfyXD/4nJRKX5JJsT/zUEJDyqT7iZuPEzmxv3Axgt7VnWhOBoQT6zqhSLHLJT43cd/1DRE8sXkH1yc+KdFDfuolPV43cV+FHGVi6xNcx/o96QExZSOxMGFIubEnuI5F450hLsIDfuIk3QNe3XicfLcnebxzFCTFurwZnRxyGfl6nYoS9z0bkzwuPnXY7lzdhHzFZSR2IBwPe5LnTw47oa/Yur79gudYbTzdenOQ0ke8t9xM8q9ew8QzZMXqfTg/uPh2e/DxshSeT+Pk5Js9uWmnUIjplIcsfOD/fguuatMdR05yF9Nz8r0NrVXSHeGAIoiT/rHqjo2B0YAigpODxgSHk0LhPzmIx7qY3OoE4T4H8Vh/Havu1lio5CAea8LXKY2UsgLwd8IuUi0ArTWsrSV3Mh2s/+q/7jFhfeydaEdx/gBa02N9bOI6atGO0tR9HTXHenvBjuL8CbSlw3p7rn0ZzeSOpkAH0IYW+zK49u/8EFmjdH4ALWmxf2e4zwu6aYZ7Tj4ZVgloR/k+rxT7AQWG2bVBfDPK9wOm2jd6KCqkNA+BVhTvG027v1jQPIpzBLSheH8x2eXNvw+9JIIUp8STc9TsQ89wXkG1M36ctTpQhFB9XkGG8/sG44eUJhBflZ5rkfn8k/1xk8/aPvD2aOXIOf9kjHNy9ltjyacFUaLwnJzxzlMaONkDreNAwlF4ntK4525Ve1lJcUpgARZz7lbw1Lqczt0ScD7bXbapyBZUlxRUns8m4hy/w7X0rmKtQdUrgrpz/ISc9zg4S5uUm2dgKMFQdt6joHNB71OFWgecHBhC1bmgos6PPeUWkLN2lzi6VXx+rKiz7af4WHHWTpOjgOpzhsWdR1396TRhWpxm6SfPYIU5j5q9xUrSXQgx6sEzFSnPLb8/anZiaLGcZufunust7HVq9C4vqaf+R+WeF76Hpz7f/vDOaXUcx2Lo6DTXzn7uc45nqXP6F5rVXgyVI+t8+1DuKTBNZrkHYXD/867n8tBstVrIb85Of/DygTA6/MQRBX2Qdw/CiHr8oQR2jez3ZUwNEKbGuy/Dc8/atPx7Aln1+BMUmxrcq7JIEhC2Se59kkzuwZhHXKQZ9wjCyP07W/S7kHv/TuiepgIZ7OhxTxNpl9oo6RcNVj20JtDkPi/vh6aa3Pu8dLm9Sqt73ybkfkA0KyjxBx7d75H0E5DMeyTFjXuyA5hbe5L7hdKRMPfSRsDcXxwBtnKjbsPcOy39nmv0V7Rak37PtbkPPQqQelDllnOYm0dBNiLnyB3nhAHfEp93eYLDLFLOyB3XHuRVa0EM1cPkHqyeRRkBbh77ZETOITYpAKQeadBJOQhA7pEFNucoVg5CtHpmZK54r5DijVWOgpxDEKGeJdk7I3AC0kU5CHTGmuSe/NPNKFCtwuSc/GelIYTHPTJDyRDzeuQcAqoeHNVU7Z3B7TL1klJQS5RquBD+dpSC5h5oF4IM0CkKhTmHwPt+ltVvxJtb1sJfMaY1cBIPC8pzDsFUcUu9k3iY29JBOQhKd1WFoJMtBgYGBgYGBgYGBgYGBgYGBgb/P/gfaW8PmWOiPqwAAAAASUVORK5CYII=";
+            } else if (city === "new york") {
+              국기.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShNtn7Si7h3b5khJtH4Gjoh7hx1daJvZ2snQ&s";
+            } else if (city === "london") {
+              국기.src = "https://i.namu.wiki/i/WNw8JiSr4x94S6McVTaDj70J_VmBtOPAV6NzP5FBOyRXD7E7nalYplrZeyGtsKq8KyAezsTqtS3Uec3jchRRUw.svg";
+            } else if (city === "barcelona") {
+              국기.src = "https://i.namu.wiki/i/bRquAYJGh2tiaYVDDOXz3VlHMVNTXr_joON-LFwS22CFOu_aZcyl8DCKmaLVbBB5RNNCw5aWGvTLHkVgNEKqjw.svg";
+            } else if (city === "osaka") {
+              국기.src = "https://i.namu.wiki/i/uPDCkQv1zGpaEdmeqmEDRIM3nMyRD2BslQUouPpxpI5M-PkGdmxPwxFJvu9RCUUVYg2XOH4rfedfkxhnDqfumw.svg";
+            }
+
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
+
+    </script>
 
 </body>
 
