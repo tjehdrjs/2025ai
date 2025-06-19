@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    section {
+      display: flex;
+    }
+
+    section>div {
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Your Shopping Cart</h1>
+    <p>forEach 함수를 사용할 것</p>
+    <p>Quantity의 각 버튼마다 동일한 event를 일괄 적용할 것</p>
+  </header>
+
+  <main>
+    <section>
+      <div class="box">
+        <h1>충만 치킨 1마리</h1>
+        <img
+          src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2019/10/15/z0nBPnrzp5GIJLHq6-wZMs8fBHDHoNZiXcVvXsuIpjeWvnuwUYmPbl2RJ7ODPCon.jpg"
+          alt="">
+        <p>Price : <span class="price">21000</span></p>
+        <label>
+          <p>Quantity:<input type="number" value="1" class="quantity"></p>
+        </label>
+      </div>
+      <div class="box">
+        <h1>쌀통닭 1마리</h1>
+        <img
+          src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDAyMjRfNTUg%2FMDAxNzA4NzY2NDEyNTc1.CDFwp1dM9175PFxOvKyAF8cjIDDQEn7SBHWW5uVXUu4g.nVZ8MhS7Pm817qAPEDpg-to4JlK3eM7EtefeTIfzghMg.JPEG%2F20240218_154041.jpg.jpg%3Ftype%3Dw1500_60_sharpen"
+          alt="">
+        <p>Price : <span class="price">17000</span></p>
+        <label>
+          <p>Quantity:<input type="number" value="1" class="quantity"></p>
+        </label>
+      </div>
+    </section>
+    <section>
+      <div class="box">
+        <h1>옥야식당 국밥</h1>
+        <img
+          src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA4MDNfMjE2%2FMDAxNzIyNjg1OTE2OTU0.0oI-ELdjmbUe1L1fctji59ceBVjpxVK65VMyzfBCUKIg.mchw3ghUlcwtwvJVMBl3marxpowiXYcjH00OidfnX2Ig.JPEG%2F996DC2EF-3E97-4396-9E74-600B7F4DBF5C.jpeg%3Ftype%3Dw1500_60_sharpen"
+          alt="">
+        <p>Price : <span class="price">10000</span></p>
+        <label>
+          <p>Quantity:<input type="number" value="1" class="quantity"></p>
+        </label>
+      </div>
+      <div class="box">
+        <h1>청하감자탕</h1>
+        <img
+          src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211129_277%2F1638169897809ENjmM_JPEG%2F78600D72-E13C-422D-95C2-8D35AD28F78A.jpeg"
+          alt="">
+        <p>Price : <span class="price">8000</span></p>
+        <label>
+          <p>Quantity:<input type="number" value="1" class="quantity"></p>
+        </label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h1 class="result">Total : </h1>
+  </footer>
+
+
+  <script>
+    const box = document.querySelectorAll(".box")
+    const total = document.querySelector(".result")
+    let result = 0
+
+    box.forEach((each) => {
+      const quantity = each.querySelector(".quantity").value
+      const price = each.querySelector(".price").textContent
+
+      result += quantity * price
+    })
+    total.textContent = `Total : ${result}`
+
+    const qnt = document.querySelectorAll(".quantity")
+
+    qnt.forEach(each => {
+      each.addEventListener("click", function () {
+        const box = document.querySelectorAll(".box")
+        const total = document.querySelector(".result")
+        let result = 0
+
+        box.forEach((each) => {
+          const quantity = each.querySelector(".quantity").value
+          const price = each.querySelector(".price").textContent
+
+          result += quantity * price
+        })
+        total.textContent = `Total : ${result}`
+      })
+    })
+  </script>
+</body>
+
+</html>
