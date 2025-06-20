@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    input {
+      width: 120px;
+      height: 30px;
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+
+    #시간 {
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="">
+    시간설정 <input type="text" id="input" placeholder="초 입력"> 초 <button id="버튼1">시작</button> <button id="버튼2">정지</button>
+  </label>
+  <h1>남은 시간</h1>
+  <h1><span id="시간">0</span>s</h1>
+
+  <script>
+    const 버튼1 = document.querySelector("#버튼1")
+    const 버튼2 = document.querySelector("#버튼2")
+    const 시간 = document.querySelector("#시간")
+    const 인풋 = document.querySelector("#input")
+    let 기모띠 = 0
+    let 간격
+    버튼1.addEventListener("click", function () {
+      clearTimeout(간격)
+      if (인풋.value != 0) {
+        시간.textContent = 인풋.value
+        기모띠 = 인풋.value
+        간격 = setInterval(function () {
+          if (인풋.value != 0) {
+            시간.textContent = 기모띠
+            기모띠 -= 1
+          }
+          if (기모띠 < 0) {
+            clearTimeout(간격)
+          }
+        }, 1000)
+      }
+    })
+    버튼2.addEventListener("click", function () {
+      clearInterval(간격)
+    })
+  </script>
+</body>
+
+</html>

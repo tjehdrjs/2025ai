@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button class="버튼">타이머 버트ㄴ</button>
+  <script>
+    let 간격
+    const 버튼 = document.querySelector("button")
+    //interval: 간격
+    버튼.addEventListener("click", function () {
+      간격 = setInterval(function () {
+        console.log("지금시간: 8시 44분")
+        console.log("박태준 지각")
+      }, 2000) //1000: 1초
+    })
+    console.log(간격) // setInterval의 ID 코드
+    clearInterval(간격)
+    let 타임아웃
+    //timeout : 시간 재고 실행. 00초 뒤 실행
+    타임아웃 = setTimeout(function () {
+      console.log("박태준이 지각했다 22분")
+    }, 3000)
+    console.log("타임아웃의 ID", 타임아웃)
+    clearTimeout(타임아웃)
+  </script>
+</body>
+
+</html>
