@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    #텍스트 {
+      width: 500px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>D-Day Timer</h1>
+  <br>
+  <hr>
+  <br>
+  <p>입력되는 날짜는 오늘 이후여야 함
+    <br>
+    <br>
+    프로그램 상으로 입력할 날짜 입력 양식은 ISO를 따름:
+    날짜가 2024-01-01 이더라도 입력할 때는 2024-01-01T00:00:00 양식
+    <br>
+    <br>
+    tip : 일 → 시간 → 분 → 초 순으로 구하기
+  </p>
+
+  <input type="date" name="" id="날짜">
+  <button>시작</button>
+  <br>
+  <div id="텍스트">
+  </div>
+  <script>
+
+    const 입력 = document.querySelector("input")
+    const button = document.querySelector("button")
+    button.addEventListener("click", function () {
+      if (new Date().getTime() <= new Date(입력.value + "T00:00:00").getTime()) {
+        setInterval(function () {
+          countdownToEvent(입력.value + "T00:00:00")
+        }, 1000);
+      }
+    })
+
+    function countdownToEvent(eventDate) {
+      const now = new Date().getTime();
+      const eventTime = new Date(eventDate).getTime();
+
+      const timeRemaining = eventTime - now;
+      console.log(timeRemaining)
+
+      let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24))
+      console.log(days, "일")
+
+      let hours = Math.floor(timeRemaining / (1000 * 60 * 60)) % 24
+      console.log(hours, "시간")
+
+      let minutes = Math.floor(timeRemaining / (1000 * 60)) % 60
+      console.log(minutes, "분")
+
+      let seconds = Math.floor(timeRemaining / 1000) % 60
+      console.log(seconds, "초")
+
+      document.querySelector('#텍스트').textContent = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+    }
+
+
+  </script>
+</body>
+
+</html>
