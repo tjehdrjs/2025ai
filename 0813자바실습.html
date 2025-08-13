@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .box {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Your Shopping Cart</h1>
+  <p>forEach 함수를 사용할 것</p>
+  <p>Quantity의 각 버튼마다 동일한 event를 일괄 적용할 것</p>
+  <p>dataset을 사용하여 가격과 할인율을 계산할 것</p>
+
+  <div class="box">
+    <div class="충만" data-price="21000" data-sale="0.1">
+      <h1>충만치킨 1마리</h1>
+      <img
+        src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2019/10/15/z0nBPnrzp5GIJLHq6-wZMs8fBHDHoNZiXcVvXsuIpjeWvnuwUYmPbl2RJ7ODPCon.jpg"
+        alt="">
+      <p>Price: 21000 → 18900</p>
+      <p>할인: 10%</p>
+      <label for="">수량: <input type="number" value="1" class="quantity1"></label>
+    </div>
+    <div class="쌀통" data-price="17000" data-sale="0.2">
+      <h1>쌀통닭 1마리</h1>
+      <img
+        src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDAyMjRfNTUg%2FMDAxNzA4NzY2NDEyNTc1.CDFwp1dM9175PFxOvKyAF8cjIDDQEn7SBHWW5uVXUu4g.nVZ8MhS7Pm817qAPEDpg-to4JlK3eM7EtefeTIfzghMg.JPEG%2F20240218_154041.jpg.jpg%3Ftype%3Dw1500_60_sharpen"
+        alt="">
+      <p>Price: 17000 → 13600</p>
+      <p>할인: 20%</p>
+      <label for="">수량: <input type="number" value="1" class="quantity2"></label>
+    </div>
+    <div class="옥야" data-price="10000" data-sale="0.2">
+      <h1>옥야식당 국밥</h1>
+      <img
+        src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA4MDNfMjE2%2FMDAxNzIyNjg1OTE2OTU0.0oI-ELdjmbUe1L1fctji59ceBVjpxVK65VMyzfBCUKIg.mchw3ghUlcwtwvJVMBl3marxpowiXYcjH00OidfnX2Ig.JPEG%2F996DC2EF-3E97-4396-9E74-600B7F4DBF5C.jpeg%3Ftype%3Dw1500_60_sharpen"
+        alt="">
+      <p>Price: 10000 → 8000</p>
+      <p>할인: 20%</p>
+      <label for="">수량: <input type="number " value="1" class="quantity3"></label>
+    </div>
+    <div class="청하" data-price="8000" data-sale="0.5">
+      <h1>청하감자탕</h1>
+      <img
+        src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211129_277%2F1638169897809ENjmM_JPEG%2F78600D72-E13C-422D-95C2-8D35AD28F78A.jpeg"
+        alt="">
+      <p>Price: 8000 → 4000</p>
+      <p>할인: 50%</p>
+      <label for="">수량: <input type="number" value="1" class="quantity4"></label>
+    </div>
+  </div>
+  <hr>
+  <h2 class="total">44500</h2>
+
+  <script>
+    function 함수() {
+      let 기모띠1 = document.querySelector(".quantity1")
+      let 기모띠2 = document.querySelector(".quantity2")
+      let 기모띠3 = document.querySelector(".quantity3")
+      let 기모띠4 = document.querySelector(".quantity4")
+      const 충만치킨 = document.querySelector(".충만")
+      console.log((충만치킨.dataset.price - (충만치킨.dataset.price * 충만치킨.dataset.sale)))
+      충만 = (충만치킨.dataset.price - (충만치킨.dataset.price * 충만치킨.dataset.sale)) * 기모띠1.value
+      const 쌀통닭 = document.querySelector(".쌀통")
+      console.log(쌀통닭.dataset.price - (쌀통닭.dataset.price * 쌀통닭.dataset.sale))
+      쌀통 = (쌀통닭.dataset.price - (쌀통닭.dataset.price * 쌀통닭.dataset.sale)) * 기모띠2.value
+      const 옥야식당 = document.querySelector(".옥야")
+      console.log(옥야식당.dataset.price - (옥야식당.dataset.price * 옥야식당.dataset.sale))
+      옥야 = (옥야식당.dataset.price - (옥야식당.dataset.price * 옥야식당.dataset.sale)) * 기모띠3.value
+      const 청하감자탕 = document.querySelector(".청하")
+      console.log(청하감자탕.dataset.price - (청하감자탕.dataset.price * 청하감자탕.dataset.sale))
+      청하 = (청하감자탕.dataset.price - (청하감자탕.dataset.price * 청하감자탕.dataset.sale)) * 기모띠4.value
+      토탈.textContent = 충만 + 쌀통 + 옥야 + 청하
+    }
+
+    let 토탈 = document.querySelector(".total")
+
+    let 인풋 = document.querySelector("input")
+
+    인풋.addEventListener("input", 함수)
+
+
+  </script>
+</body>
+
+</html>
