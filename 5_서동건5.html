@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <style>
+    .box {
+      display: flex;
+    }
+
+    .box1 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 250px;
+      border: black solid 2px;
+    }
+
+    .box2 {
+      border: black solid 2px;
+      width: 310px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .box3 {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container col-4">
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+          <a class="navbar-brand" href="#!">Portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#">종로산업정보학교</a></li>
+              <li class="nav-item"><a class="nav-link" href="#!">Al컴퓨터과</a></li>
+              <li class="nav-item"><a class="nav-link" href="#!">05번</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">서동건</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <header class="py-5 border-bottom">
+        <div class="container">
+          <div class="box my-5">
+            <ul>
+              <h2 class="fw-bolder">안녕하세요!</h2>
+              <h2>저는 개발자를 꿈꾸는</h2>
+              <h2>개발자 꿈나무🌳</h2>
+              <h2>서동건입니다.</h2>
+            </ul>
+            <div class="ms-5">
+              <img
+                src="https://i.namu.wiki/i/6UaYj-lmIqDKQuBQbuPGQ_OfuhhGmQf8rl3py4dl2Lh7ABp5sW-XjfTGp7mRDxM4CYskfDkwoEomYUzZXk3icA.webp"
+                alt="">
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="box1">
+          <h2>서동건에 대하여</h2>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              잘하는 일
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"><img width="100px"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+                alt="">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                상세설명
+              </button>
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">상세설명</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      제가 잘한다고 생각하는것은 솔직히 없는것 같지만
+                      굳이 말한다면 Html이라고 말할 수있는데요 다른것들 보다는 잘하지만 그래도 못하는건 맞아서 더 많이 해서 잘해지고 싶습니다.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              다룰 줄 아는 것
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"><img width="200px"
+                src="https://img-c.udemycdn.com/course/750x422/1157320_e6c7.jpg" alt="">
+              <img width="200px"
+                src="https://images.velog.io/images/ahj0530/post/550f8406-b736-420d-bc4f-5ce8b0347d5d/python%20(1).png"
+                alt="">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                상세설명
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">상세설명</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Html,Css,javascript,Python를 다룰 줄 알지만
+                      아직 부족하여 더 노력해서 잘해질겁니다.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="box2">서동건 포트폴리오들</h2>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a target="_blank" href="5_서동건 수행.html"><img class="d-block w-100"
+                    src="https://kr.ktown4u.com/goods_files/SH0164/goods_images/000094/GD00093575.default.1.jpg"
+                    alt=""></a>
+              </div>
+              <div class="carousel-item">
+                <a target="_blank" href="5_서동건2.html"><img class="d-block w-100"
+                    src="https://image.yes24.com/goods/112629488/XL" alt=""></a>
+              </div>
+              <div class="carousel-item">
+                <a target="_blank" href="5_서동건.html"><img class="d-block w-100"
+                    src="https://koreanmusicawards.com/wp-content/uploads/2021/01/2020_blackskirt.jpg" alt=""></a>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="box3">
+        <ul>
+          <li>
+            <h4>지금까지 서동건 포트폴리오 였습니다.</h4>
+          </li>
+          <li>
+            <h5>감사합니다.</h5>
+          </li>
+        </ul>
+        <img width="500px" src="https://img.hankyung.com/photo/202305/01.33492796.1.jpg" alt="">
+      </div>
+      <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+          <p class="m-0 text-center text-white">© 2025 Seo,dong-gun. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+</body>
+
+</html>
