@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!DOCTYPE html>
+    <html lang="ko">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          color: #333333;
+        }
+
+        body {
+          width: 100%;
+        }
+
+        .wrap {
+          width: 1200px;
+          margin: 0 auto;
+        }
+
+        li {
+          list-style-type: none;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        .header {
+          width: 1200px;
+          height: 100px;
+          background-color: turquoise;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .logo1 {
+          width: 200px;
+          height: 100px;
+          background-color: springgreen;
+        }
+
+        .menu {
+          display: flex;
+          height: 50px;
+          line-height: 50px;
+          margin-right: 50px;
+          position: relative;
+        }
+
+
+        .bg-right {
+          width: 50px;
+          height: 150px;
+          background-color: rgb(0, 0, 0);
+          position: absolute;
+          top: 50px;
+          right: -50px;
+        }
+
+        .bg-left {
+          width: 550px;
+          height: 150px;
+          background-color: rgb(0, 0, 0);
+          position: absolute;
+          top: 50px;
+          left: -550px;
+        }
+
+        .menu li {
+          width: 150px;
+          text-align: center;
+          background-color: steelblue;
+        }
+
+        .slide_container {
+          width: 1200px;
+          height: 300px;
+          background-color: yellowgreen;
+        }
+
+        .li>ul {
+          display: none;
+        }
+
+        .menu:hover ul {
+          display: block;
+        }
+
+        .contents {
+          width: 1200px;
+          height: 200px;
+          display: flex;
+        }
+
+        .contents>div {
+          width: 400px;
+          height: 200px;
+        }
+
+        .con1 {
+          background-color: coral;
+        }
+
+        .con1-con {
+          background-color: rgb(179, 150, 38);
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+        }
+
+        .con1-tab {
+          background-color: rgb(179, 150, 38);
+          height: 150px;
+        }
+
+        .con2 {
+          background-color: rgb(16, 50, 63);
+        }
+
+        .con2-con {
+          background-color: cadetblue;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+        }
+
+        .con2-tab {
+          background-color: cadetblue;
+          height: 150px;
+        }
+
+        .con3 {
+          background-color: cornflowerblue;
+        }
+
+        .footer {
+          width: 1200px;
+          height: 100px;
+          display: flex;
+        }
+
+        .copy {
+          width: 1000px;
+          height: 100px;
+          background-color: pink;
+        }
+
+        .family {
+          width: 200px;
+          height: 100px;
+          background-color: deepskyblue;
+        }
+
+        li:hover {
+          cursor: pointer;
+          background-color: white;
+        }
+      </style>
+    </head>
+
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="logo1"></div>
+        <ul class="menu">
+
+          <li class="li"><a href="#">회사소개</a>
+            <ul>
+              <div class="bg-left"></div>
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">조직구성도</a></li>
+              <li><a href="#">오시는길</a></li>
+            </ul>
+          </li>
+          <li class="li"><a href="#">사업영역</a>
+            <ul>
+              <li><a href="#">전원주택</a></li>
+              <li><a href="#">도시재생</a></li>
+              <li><a href="#">인테리어</a></li>
+            </ul>
+          </li>
+          <li class="li"><a href="#">입주정보</a>
+            <ul>
+              <li><a href="#">입주단지</a></li>
+              <li><a href="#">입주캘린더</a></li>
+            </ul>
+          </li>
+          <li class="li"><a href="#">고객센터</a>
+            <ul>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">건축상담</a></li>
+              <li><a href="#">홍보자료실</a></li>
+              <div class="bg-right"></div>
+            </ul>
+          </li>
+        </ul>
+      </header>
+
+      <section class="slide_container"></section>
+
+      <section class="contents">
+        <div class="con1">
+          <p class="con1-con">공지사항</p>
+          <ul class="con1-tab">
+            <li>asdasd</li>
+            <li>asdassadsssss</li>
+            <li>qwefdsfqweqwe</li>
+          </ul>
+        </div>
+        <div class="con2">
+          <p class="con2-con">갤러리</p>
+          <div class="con2-tab">
+            <img width="100px"
+              src="https://i.namu.wiki/i/PMldah5VCOcbl6d3hPAuc6jA7wqOuj1SEF3FlROgrjW8RXPRA-BBPmKc_W_65uEuTllvJCua9oGvIZ9jZZM6sw.webp"
+              alt="">
+            <img width="100px"
+              src="https://i.namu.wiki/i/PMldah5VCOcbl6d3hPAuc6jA7wqOuj1SEF3FlROgrjW8RXPRA-BBPmKc_W_65uEuTllvJCua9oGvIZ9jZZM6sw.webp"
+              alt="">
+            <img width="100px"
+              src="https://i.namu.wiki/i/PMldah5VCOcbl6d3hPAuc6jA7wqOuj1SEF3FlROgrjW8RXPRA-BBPmKc_W_65uEuTllvJCua9oGvIZ9jZZM6sw.webp"
+              alt="">
+          </div>
+        </div>
+        <div class="con3">배너</div>
+      </section>
+
+      <footer class="footer">
+        <div class="copy"></div>
+        <div class="family"></div>
+      </footer>
+    </div>
+
+  </body>
+
+  </html>
+</body>
+
+</html>
